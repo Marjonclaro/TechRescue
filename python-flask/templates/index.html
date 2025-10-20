@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechRescue Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script>
+        function openPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>TechRescue Dashboard</h1>
+        <p>Welcome, Admin</p>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Customers Card -->
+        <div class="card">
+            <div class="content-box">
+                <div class="card-title">Customers</div>
+                <div class="card-content">Manage all customers here.</div>
+                <button onclick="openPage('/customers')">Go</button>
+            </div>
+        </div>
+
+        <!-- Technicians Card -->
+        <div class="card">
+            <div class="content-box">
+                <div class="card-title">Technicians</div>
+                <div class="card-content">View and manage all technicians.</div>
+                <button onclick="openPage('/technicians')">Go</button>
+            </div>
+        </div>
+
+        <!-- Admins Card -->
+        <div class="card">
+            <div class="content-box">
+                <div class="card-title">Admins</div>
+                <div class="card-content">Admin controls and settings.</div>
+                <button onclick="openPage('/admins')">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

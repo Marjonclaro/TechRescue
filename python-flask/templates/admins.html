@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechRescue - Admins</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <script>
+        function openPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Admin CRUD Operations</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Create</h2>
+            <ul>
+                <li>Add new technicians or system users</li>
+                <li>Add new service categories or types</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Read</h2>
+            <ul>
+                <li>View all users, technicians, and service requests</li>
+                <li>View reports, analytics, and feedback</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Update</h2>
+            <ul>
+                <li>Edit user or technician info</li>
+                <li>Approve or reject technician applications</li>
+                <li>Update service categories and pricing</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Delete</h2>
+            <ul>
+                <li>Remove inactive users, technicians, or records</li>
+                <li>Delete invalid or duplicate service requests</li>
+            </ul>
+        </section>
+
+        <button onclick="openPage('/')">⬅ Back to Dashboard</button>
+    </main>
+
+    <footer>
+        <p>© 2025 TechRescue. All rights reserved.</p>
+    </footer>
+</body>
+</html>

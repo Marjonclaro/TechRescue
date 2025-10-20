@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechRescue - Customers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='customer.css') }}">
+    <script>
+        function openPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>TechRescue - Customer Operations</h1>
+        <p>Manage customer accounts, requests, and feedback</p>
+    </header>
+
+    <main>
+        <h2>Customer CRUD Operations</h2>
+
+        <section>
+            <h3>Create</h3>
+            <ul>
+                <li>Create an account/profile</li>
+                <li>Submit a new repair/service request</li>
+                <li>Add feedback or reviews for technician</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Read</h3>
+            <ul>
+                <li>View their profile and request history</li>
+                <li>View technician list and service details</li>
+                <li>Track repair status and invoices</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Update</h3>
+            <ul>
+                <li>Edit profile information (name, contact, address)</li>
+                <li>Update or cancel pending service requests</li>
+                <li>Modify feedback if allowed</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Delete</h3>
+            <ul>
+                <li>Delete own account</li>
+                <li>Cancel or remove completed requests (optional)</li>
+            </ul>
+        </section>
+
+        <button onclick="openPage('/')">⬅ Back to Dashboard</button>
+    </main>
+
+    <footer>
+        <p>© 2025 TechRescue. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

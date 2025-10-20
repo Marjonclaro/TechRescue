@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechRescue - Technicians</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='technician.css') }}">
+    <script>
+        function openPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Technician CRUD Operations</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Create</h2>
+            <ul>
+                <li>Register a technician account</li>
+                <li>Add service reports or job notes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Read</h2>
+            <ul>
+                <li>View assigned service requests</li>
+                <li>View customer details and repair history</li>
+                <li>Access system notifications or schedule</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Update</h2>
+            <ul>
+                <li>Update repair status (e.g., pending → in progress → completed)</li>
+                <li>Update technician profile and service specialties</li>
+                <li>Edit service report details</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Delete</h2>
+            <ul>
+                <li>Delete completed or duplicate service logs (admin-approved)</li>
+            </ul>
+        </section>
+
+        <button onclick="openPage('/')">⬅ Back to Dashboard</button>
+    </main>
+
+    <footer>
+        <p>© 2025 TechRescue. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
