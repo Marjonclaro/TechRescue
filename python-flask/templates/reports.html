@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reports — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Reports</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section">
+      <h2>Analytics & Reports 📈</h2>
+      <p class="muted">View sales, performance, and workload reports.</p>
+      
+      <div class="card" style="padding: 40px;">
+        <p><strong>Placeholder:</strong> Charts and data visualization elements for reports will be added here.</p>
+      </div>
+
+      <button class="btn outline" onclick="openPage('/')">⬅ Back to Dashboard</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

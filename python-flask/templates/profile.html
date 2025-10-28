@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Account Profile — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Profile</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section">
+      <h2>My Account Details 👤</h2>
+      <p class="muted">Manage your personal information, address, and login settings.</p>
+      
+      <div class="card" style="padding: 40px;">
+        <h4>Contact Information</h4>
+        <p>Name: User Name</p>
+        <p>Email: user@example.com</p>
+        <button class="btn ghost small">Edit Profile</button>
+      </div>
+
+      <button class="btn danger" style="margin-top: 25px;" onclick="alert('You have been logged out.'); window.location.href='/'">
+        🚪 Log Out
+      </button>
+
+      <a href="/customer-dashboard" class="btn outline small" style="margin-top: 15px; display: block;">
+        ⬅ Back
+      </a>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+</body>
+</html>
+</html>

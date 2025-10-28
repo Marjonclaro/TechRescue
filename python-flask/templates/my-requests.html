@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Requests — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">My Requests</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section">
+      <h2>Service Request History 🛠️</h2>
+      <p class="muted">Track the status of your open jobs and review past service history.</p>
+      
+      <section class="grid items-grid">
+        <article class="list-card card">
+          <h4>Job #1001: Cracked Screen</h4>
+          <p class="muted">Status: Pending Technician Assignment • Date: 2025-10-28</p>
+          <div class="card-actions">
+            <button class="btn outline small">View Details</button>
+          </div>
+        </article>
+      </section>
+
+      <a href="/customer-dashboard" class="btn outline">⬅ Back</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script

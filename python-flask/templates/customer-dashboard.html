@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Customer Dashboard — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Customer Dashboard</span>
+    </div>
+
+    <nav class="nav" id="mainNav">
+      <a href="/customer-dashboard" class="nav-link">Dashboard</a>
+      <a href="/my-requests" class="nav-link">My Requests</a>
+      <a href="/profile" class="nav-link">Profile</a> 
+      </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero" style="flex-direction: column; text-align: center; max-width: 600px; margin: 28px auto;">
+      <h1>Welcome Back, Customer! 👋</h1>
+      <p class="muted">Quickly submit a new service request or check the status of your open jobs.</p>
+      
+      <div class="hero-actions" style="margin-top: 25px;">
+        <button class="btn primary large" onclick="openPage('/submit-request')">🚀 Submit a New Request</button>
+      </div>
+    </section>
+
+    <section class="grid dashboard-grid">
+      <article class="card" onclick="openPage('/my-requests')">
+        <h3>My Service History</h3>
+        <p>Review past repairs and track the status of current requests.</p>
+      </article>
+
+      <article class="card" onclick="openPage('/profile')">
+        <h3>Account & Profile</h3>
+        <p>Manage your contact details, address, and password.</p>
+      </article>
+
+      <article class="card" onclick="openPage('/faq')">
+        <h3>Help Center</h3>
+        <p>Find answers to common questions about our services.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

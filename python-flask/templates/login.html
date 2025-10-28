@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Customer Login — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Login</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section" style="max-width: 400px; margin: 40px auto; text-align: center;">
+      <h2>Customer Login 🔐</h2>
+      <p class="muted">Enter your credentials to access your support portal.</p>
+      
+      <div style="padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+        
+        <form style="display: flex; flex-direction: column; gap: 15px; width: 100%;" onsubmit="return false;">
+          <div class="form-group" style="text-align: left;">
+            <label for="username" style="display: block; margin-bottom: 5px; font-weight: bold;">Email or Username</label>
+            <input type="text" id="username" name="username" placeholder="enter your email or username" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+          <div class="form-group" style="text-align: left;">
+            <label for="password" style="display: block; margin-bottom: 5px; font-weight: bold;">Password</label>
+            <input type="password" id="password" name="password" placeholder="enter your password" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+        </form>
+        <button class="btn" style="width: 100%;" onclick="alert('Login successful!') ; openPage('/customer-dashboard')">Log In</button>
+        
+        <p class="muted" style="margin-top: 15px;">
+          Don't have an account? <a href="/signup" onclick="openPage('/signup')" style="color: var(--primary); text-decoration: none;">Sign Up</a>
+        </p>
+      </div>
+
+      <button class="btn outline small" onclick="openPage('/')">⬅ Back to Home</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

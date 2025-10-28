@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Customers — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Customers</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section">
+      <h2>Customer Operations</h2>
+      <p class="muted">Manage customer profiles, requests, and feedback.</p>
+
+      <div class="controls">
+        <button class="btn" onclick="alert('Add customer form')">+ New Customer</button>
+      </div>
+
+      <section class="grid items-grid">
+        <article class="list-card card">
+          <h4>Juan Dela Cruz</h4>
+          <p class="muted">juan@example.com • 0917-000-0000</p>
+          <div class="card-actions">
+            <button class="btn outline small">View</button>
+            <button class="btn ghost small">Edit</button>
+            <button class="btn danger small">Delete</button>
+          </div>
+        </article>
+
+        <article class="list-card card">
+          <h4>Maria Santos</h4>
+          <p class="muted">maria@example.com • 0917-111-1111</p>
+          <div class="card-actions">
+            <button class="btn outline small">View</button>
+            <button class="btn ghost small">Edit</button>
+            <button class="btn danger small">Delete</button>
+          </div>
+        </article>
+      </section>
+
+      <button class="btn outline" onclick="openPage('/')">⬅ Back to Dashboard</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

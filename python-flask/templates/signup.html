@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Create Account — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Sign Up</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section" style="max-width: 400px; margin: 40px auto; text-align: center;">
+      <h2>Create Account ✨</h2>
+      <p class="muted">Join TechRescue for easy access to repair services.</p>
+      
+      <div style="padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+        
+        <form style="display: flex; flex-direction: column; gap: 15px; width: 100%;" onsubmit="return false;">
+          
+          <div class="form-group" style="text-align: left;">
+            <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="enter your full name" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+          
+          <div class="form-group" style="text-align: left;">
+            <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="enter your email address" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+          
+          <div class="form-group" style="text-align: left;">
+            <label for="password" style="display: block; margin-bottom: 5px; font-weight: bold;">Password</label>
+            <input type="password" id="password" name="password" placeholder="create a password" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+        </form>
+        <button class="btn" style="width: 100%;" onclick="alert('Account created successfully!') ; openPage('/customer-dashboard')">Create Account</button>
+        
+        <p class="muted" style="margin-top: 15px;">
+          Already registered? <a href="/login" onclick="openPage('/login')" style="color: var(--primary); text-decoration: none;">Log In</a>
+        </p>
+      </div>
+
+      <button class="btn outline small" onclick="openPage('/')">⬅ Back to Home</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

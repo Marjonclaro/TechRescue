@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Login — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Admin Access</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section" style="max-width: 400px; margin: 40px auto; text-align: center;">
+      <h2>Administrator Login ⚙️</h2>
+      <p class="muted">Access restricted to authorized personnel (Technicians, Admins).</p>
+      
+      <div style="padding: 20px;">
+        <p><strong>Placeholder:</strong> Dedicated login form for staff will go here (Username and Password).</p>
+        <button class="btn danger" style="width: 100%; margin-top: 15px;" onclick="openPage('/customers')">Log In to Staff Dashboard (Demo)</button>
+        <p class="muted" style="margin-top: 15px;">
+          (This button currently bypasses authentication and navigates directly to the `/customers` page for testing the dashboard.)
+        </p>
+      </div>
+
+      <button class="btn outline small" onclick="openPage('/')">⬅ Back to Home</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

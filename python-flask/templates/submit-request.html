@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Submit Request — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Submit Request</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section">
+      <h2>New Service Request 📝</h2>
+      <p class="muted">Fill out the form below to begin a new repair service.</p>
+      
+      <div class="card" style="padding: 40px; border: 1px solid #ccc; box-shadow: none;">
+        <p><strong>This is the placeholder content for the form.</strong></p>
+        <p>You can start adding your form elements here!</p>
+      </div>
+
+      <a href="/customer-dashboard" class="btn outline">⬅ Back</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

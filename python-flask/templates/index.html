@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TechRescue Login Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <button class="burger" id="navToggle" aria-label="Toggle menu">☰</button>
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Support Portal</span>
+    </div>
+
+    <nav class="nav" id="mainNav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/faq" class="nav-link">Help & FAQ</a> 
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero" style="flex-direction: column; text-align: center; max-width: 600px; margin: 28px auto;">
+      <h1>Welcome to TechRescue!</h1>
+      <p class="muted">Log in to manage your requests, track your repairs, and access specialized support services.</p>
+      
+      <div class="hero-actions" style="margin-top: 25px;">
+        <button class="btn" onclick="openPage('/login')">LOGIN to Account</button>
+        <button class="btn outline" onclick="openPage('/signup')">Create Account</button>
+      </div>
+    </section>
+
+    <section class="page-section" style="margin-top: 40px; text-align: center;">
+      <h2>Need Technician Access?</h2>
+      <p class="muted">If you are an authorized administrator or technician, please use your dedicated login link.</p>
+      <a href="/admin-login" class="btn small outline">Technician/Admin Login</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+    
+    // Toggle menu functionality for mobile (from the original file)
+    document.getElementById('navToggle').onclick = function() {
+      document.getElementById('mainNav').classList.toggle('is-open');
+    }
+  </script>
+</body>
+</html>

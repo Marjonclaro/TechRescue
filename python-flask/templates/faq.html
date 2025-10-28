@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Help & FAQ — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Help Center</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section">
+      <h2>Frequently Asked Questions ❓</h2>
+      <p class="muted">Find quick answers and troubleshooting guides.</p>
+      
+      <div class="card" style="margin-bottom: 15px;">
+        <h4>Q: How long does a repair usually take?</h4>
+        <p>A: Most common repairs are completed within 3-5 business days, depending on parts availability.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 15px;">
+        <h4>Q: What devices do you service?</h4>
+        <p>A: We specialize in laptops, smartphones, and small home electronics.</p>
+      </div>
+      
+      <p style="margin-top: 25px;">Still need help? Please log in or create an account to submit a service request.</p>
+
+      <button class="btn outline" onclick="openPage('/')">⬅ Back to Home</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

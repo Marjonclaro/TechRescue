@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Technicians — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Technicians</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section">
+      <h2>Technician Operations</h2>
+      <p class="muted">Register, update, and manage technician jobs and statuses.</p>
+
+      <div class="controls">
+        <button class="btn" onclick="alert('Register technician form')">+ Register Technician</button>
+      </div>
+
+      <section class="grid items-grid">
+        <article class="list-card card">
+          <h4>Pedro Tech</h4>
+          <p class="muted">Specialty: Laptop repair • Status: Available</p>
+          <div class="card-actions">
+            <button class="btn outline small">Profile</button>
+            <button class="btn ghost small">Assign</button>
+          </div>
+        </article>
+
+        <article class="list-card card">
+          <h4>Anne Fixit</h4>
+          <p class="muted">Specialty: Mobile repair • Status: On Job</p>
+          <div class="card-actions">
+            <button class="btn outline small">Profile</button>
+            <button class="btn ghost small">Assign</button>
+          </div>
+        </article>
+      </section>
+
+      <button class="btn outline" onclick="openPage('/')">⬅ Back to Dashboard</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>

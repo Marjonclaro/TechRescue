@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admins — TechRescue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo">TechRescue</a>
+      <span class="tag">Admins</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-section">
+      <h2>Admin Controls</h2>
+      <p class="muted">Create and manage system users, categories, and approvals.</p>
+
+      <div class="controls">
+        <button class="btn" onclick="alert('Invite new admin')">+ Invite Admin</button>
+      </div>
+
+      <section class="grid items-grid">
+        <article class="list-card card">
+          <h4>System Admin</h4>
+          <p class="muted">Role: Super Admin • admin@example.com</p>
+          <div class="card-actions">
+            <button class="btn outline small">Edit</button>
+            <button class="btn ghost small">Permissions</button>
+          </div>
+        </article>
+      </section>
+
+      <button class="btn outline" onclick="openPage('/')">⬅ Back to Dashboard</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 TechRescue</div>
+    <div class="small">Built with Flask • Clean UI</div>
+  </footer>
+
+  <script>
+    function openPage(page) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = page, 300);
+    }
+  </script>
+</body>
+</html>
